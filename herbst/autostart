@@ -189,16 +189,16 @@ hc set default_frame_layout horizontal
 
 #Stop existing programs if running
 #pkill tint2
-#killall -q polybar
+killall -q polybar
 #pkill nitrogen
-#pkill picom
+pkill picom
 
 # Auto start programs
 #tint2 &
-#polybar &
-#bash ~/.config/polybar/launch_polybar.sh &
+polybar &
+bash ~/.config/polybar/launch_polybar.sh &
 #nitrogen --restore &
-#picom --backend glx --blur-method dual_kawase --blur-strength 5 --corner-radius 10 &
+picom --backend glx --blur-method dual_kawase --blur-strength 5 --corner-radius 10 &
 
 # unlock, just to be sure
 hc unlock
@@ -216,8 +216,11 @@ hc detect_monitors
 #    "$panel" "$monitor" &
 #done
 
-Mount
+#Mount
 #sudo mount -t ntfs-3g /dev/nvme0n1p3 /run/media/daniel/Windows
+
+#Keyboard
+setxkbmap -layout no 
 
 #hc rename 6 T
 #hc merge_tag T
